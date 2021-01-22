@@ -8,6 +8,9 @@ pipeline {
     }
 
     stage('test') {
+      environment {
+        stage = 'test'
+      }
       parallel {
         stage('test') {
           steps {
